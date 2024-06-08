@@ -1,0 +1,41 @@
+@model IEnumerable<ApplicationUser>
+
+<h2>Users</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>Actions</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a href="@Url.Action("Edit", new { id = user.Id })">Edit</a> |
+                        <a href="@Url.Action("Delete", new { id = user.Id })">Delete</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (User.IsInRole("Admin"))
+{
+    <a href="@Url.Action("Create")" class="btn btn-primary">Create New User</a>
+}

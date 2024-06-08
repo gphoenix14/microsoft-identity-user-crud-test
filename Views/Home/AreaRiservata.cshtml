@@ -1,0 +1,11 @@
+@model AreaRiservataViewModel
+
+<h2>Area Riservata</h2>
+
+<p>Ciao @Model.UserName, i tuoi ruoli sono:</p>
+<ul>
+    @foreach (var role in Model.Roles)
+    {
+        <li>@role</li>
+    }
+</ul>
