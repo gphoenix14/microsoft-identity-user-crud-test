@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestMicrosoftIdentity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+189f064223e4e9b5f544f78c24c7ca40cd4e14f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestMicrosoftIdentity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestMicrosoftIdentity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
